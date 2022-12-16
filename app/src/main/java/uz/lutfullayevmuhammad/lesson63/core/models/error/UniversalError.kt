@@ -1,0 +1,1 @@
+package uz.lutfullayevmuhammad.lesson63.core.models.errorimport com.google.gson.annotations.SerializedNamedata class UniversalError(    @SerializedName("status")    val status: String,    @SerializedName("code")    val code: Int, // 400    @SerializedName("message")    val message: String)

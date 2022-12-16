@@ -1,0 +1,1 @@
+package uz.lutfullayevmuhammad.lesson63.core.di.ui.mainimport dagger.Module@Moduleclass MainActivityModule {}

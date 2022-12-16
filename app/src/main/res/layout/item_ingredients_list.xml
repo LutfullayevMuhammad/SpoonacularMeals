@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/black"
+    android:layout_height="75dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_marginBottom="2dp"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/ingredients_image"
+            android:layout_width="0dp"
+            app:layout_constraintDimensionRatio="1.4:1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:src="@drawable/slow_cooker"
+            android:layout_marginVertical="10dp"
+            android:layout_marginStart="10dp"
+            android:foregroundGravity="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_height="match_parent"/>
+
+        <TextView
+            android:id="@+id/ingredients_amount"
+            android:layout_width="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ingredients_image"
+            tools:text="1 can"
+            android:layout_marginStart="5dp"
+            android:textSize="17sp"
+            android:textColor="@color/black"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/ingredients_name"
+            android:layout_width="0dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ingredients_amount"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginHorizontal="15dp"
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            tools:text="extra virgin olive oil"
+            android:layout_height="wrap_content"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

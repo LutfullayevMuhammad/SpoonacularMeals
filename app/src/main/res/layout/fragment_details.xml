@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.details.DetailsFragment">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/meal_icon" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#80FFFFFF" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#00833C">
+
+            <ImageView
+                android:id="@+id/back_button"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/back_btn"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Meal Recipe"
+                android:textColor="#fff"
+                android:textSize="30sp"
+                android:textStyle="normal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/back_button"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/meal_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:textColor="@color/black"
+                    android:textSize="25sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="The Ultimate Devil’s Food Cake" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginHorizontal="60dp"
+                    android:layout_marginTop="10dp"
+                    app:cardBackgroundColor="#AFAFAF"
+                    app:layout_constraintDimensionRatio="1:0.6"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/meal_name">
+
+                    <ImageView
+                        android:id="@+id/meal_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="4dp"
+                        android:scaleType="centerCrop"
+                        tools:src="@drawable/meal" />
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/summary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="7dp"
+                    android:layout_marginTop="10dp"
+                    android:background="#99FFFFFF"
+                    android:padding="10dp"
+                    android:textColor="#4A4A4A"
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/card_image"
+                    tools:text="Easy Strawberry Dump Cake is a dessert that serves 6. For $1.24 per serving, this recipe covers 2% of your daily requirements of vitamins and minerals. One serving contains 161 calories, 0g of protein, and 16g of fat. It is brought to you by Pink When. Only a few people made this recipe, and 1 would say it hit the spot. From preparation to the plate, this recipe takes about 1 hour and 10 minutes. It is perfect for Mother's Day. A mixture of strawberry filling, vanilla cake mix, butter, and a handful of other ingredients are all it takes to make this recipe so flavorful. It is a good option if you're following a gluten free and fodmap friendly diet. All things considered, we decided this recipe deserves a spoonacular score of 0%. This score is very bad (but still fixable). Users who liked this recipe also liked Strawberry Rhubarb Dump Cake, Strawberry Pineapple Angel Dump Cake, and Strawberry Pineapple Angel Dump Cake." />
+
+                <TextView
+                    android:id="@+id/pairing_text"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="7dp"
+                    android:layout_marginTop="10dp"
+                    android:background="#99F1E3F1"
+                    android:padding="10dp"
+                    android:textColor="@color/black"
+                    android:textSize="17sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/summary"
+                    tools:text="Cream Sherry, Moscato d'Asti, and Port are my top picks for Cake. A common wine pairing rule is to make sure your wine is sweeter than your food. Delicate desserts go well with Moscato d'Asti, nutty desserts with cream sherry, and caramel or chocolate desserts pair well with port. You could try NV Solera Cream Sherry. Reviewers quite like it with a 4.5 out of 5 star rating and a price of about 17 dollars per bottle." />
+
+                <TextView
+                    android:id="@+id/ingredients_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="7dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Ingredients"
+                    android:textColor="@color/black"
+                    android:textSize="30sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/pairing_text" />
+
+                <LinearLayout
+                    android:id="@+id/ingredients_list_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="7dp"
+                    android:layout_marginTop="3dp"
+                    tools:background="#B3FFFFFF"
+                    android:orientation="horizontal"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/ingredients_title">
+
+                    <TextView
+                        android:id="@+id/ingredient_grid"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="25dp"
+                        android:text="Grid"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        tools:background="#B3279FCA" />
+
+                    <TextView
+                        android:id="@+id/ingredient_list"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="25dp"
+                        android:text="List"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/ingredients_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="7dp"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/ingredients_list_style" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/ingredients_list"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginStart="7dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Price Breakdown"
+                    android:textColor="@color/black"
+                    android:textSize="30sp"
+                    android:id="@+id/price_breakdown_title"
+                    android:layout_height="wrap_content"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="#B3000000"
+                    android:layout_marginStart="7dp"
+                    android:padding="1dp"
+                    app:layout_constraintTop_toBottomOf="@id/price_breakdown_title"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:background="#E6FFFFFF"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:text="Cost per Serving:"
+                            android:textColor="@color/black"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
